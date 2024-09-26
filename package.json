@@ -1,7 +1,8 @@
 {
-  "name": "react",
+  "name": "satvik-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Satvik's personal portfolio built with React",
+  
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
