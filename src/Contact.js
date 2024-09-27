@@ -7,14 +7,18 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Using mailto to send email
-    window.location.href = `mailto:satvikgarimella2@gmail.com?subject=Message from ${name}&body=${message}`;
+
+    const formattedMessage = encodeURIComponent(message);
+    const mailtoLink = `mailto:satvikgarimella2@gmail.com?subject=Message from ${name}&body=${formattedMessage}%0D%0A%0D%0AReply to: ${email}`;
+    
+    // Open the user's default mail client with pre-filled fields
+    window.location.href = mailtoLink;
   };
 
   return (
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
-      <p>You can reach me via email or phone.</p>
+      <p>You can reach me via email or phone using the form below.</p>
 
       {/* Contact Form */}
       <form onSubmit={handleSubmit} className="contact-form">
@@ -25,6 +29,7 @@ const Contact = () => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
             required
           />
         </div>
@@ -35,6 +40,7 @@ const Contact = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Your email"
             required
           />
         </div>
@@ -44,6 +50,7 @@ const Contact = () => {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            placeholder="Your message"
             required
           ></textarea>
         </div>
