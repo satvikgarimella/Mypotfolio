@@ -11,7 +11,6 @@ const Contact = () => {
     const formattedMessage = encodeURIComponent(message);
     const mailtoLink = `mailto:satvikgarimella2@gmail.com?subject=Message from ${name}&body=${formattedMessage}%0D%0A%0D%0AReply to: ${email}`;
     
-    // Open the user's default mail client with pre-filled fields
     window.location.href = mailtoLink;
   };
 
@@ -20,7 +19,6 @@ const Contact = () => {
       <h2>Contact Me</h2>
       <p>You can reach me via email or phone using the form below.</p>
 
-      {/* Contact Form */}
       <form onSubmit={handleSubmit} className="contact-form">
         <div>
           <label htmlFor="name">Name</label>
@@ -59,7 +57,6 @@ const Contact = () => {
         </button>
       </form>
 
-      {/* Call Link */}
       <div className="contact-options">
         <p>
           Or, you can call me directly at:{" "}
