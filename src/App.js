@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
+import "./App.css";  // Import CSS for styling
 
 import Header from "./Header";
 import Hero from "./Hero";
-import WorkExperiences from "./WorkExperiences"; // Corrected spelling
-import Projects from "./Projects"; // Corrected spelling
+import WorkExperiences from "./WorkExperiences";
+import Projects from "./Projects";
 import Certificates from "./Certificates";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -14,8 +14,8 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <WorkExperiences /> {/* Corrected spelling */}
-      <Projects /> {/* Corrected spelling */}
+      <WorkExperiences />
+      <Projects />
       <Certificates />
       <Contact />
       <Footer />
