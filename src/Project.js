@@ -1,5 +1,5 @@
 import React from "react";
-import youtubeImage from "./Youtube.png"; 
+import youtubeImage from "./Youtube.png"; // Adjust the path if necessary
 
 const Projects = () => {
   return (
@@ -49,7 +49,7 @@ const Projects = () => {
           <img
             src={youtubeImage}
             alt="YouTube Clone"
-            style={{ width: "auto", height: "auto" }}
+            style={{ width: "100%", maxWidth: "400px", height: "auto" }}
           />
         </div>
         
