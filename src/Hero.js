@@ -12,11 +12,9 @@ const Hero = () => {
     <section className="hero">
       <h2>Hello, I'm Satvik</h2>
       <p>
-        I’m a passionate developer with a love for business and
-        entrepreneurship. As a proactive leader, I’ve successfully managed teams
-        and projects, focusing on quality, communication, and problem-solving. I
-        thrive on motivating others and driving projects toward common goals.
-        Quick to learn and adaptable, I’m always ready to add value to any team.
+        I’m a passionate developer with a love for business and entrepreneurship. 
+        As a proactive leader, I’ve successfully managed teams and projects, focusing 
+        on quality, communication, and problem-solving.
       </p>
       <button className="cta" onClick={scrollToWorkExperience}>
         View My Work
