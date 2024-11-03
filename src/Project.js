@@ -1,11 +1,13 @@
 import React from "react";
-import youtubeImage from "./Youtube.png"; // Adjust path according to your component's location
+import youtubeImage from "./Youtube.png"; 
 
 const Projects = () => {
   return (
     <section id="projects" className="projects">
       <h2>Projects</h2>
       <div className="project-list">
+
+        {/* Project: This Website */}
         <div className="project-card">
           <h3>This Website</h3>
           <p>
@@ -16,8 +18,21 @@ const Projects = () => {
             modern web development technologies.
           </p>
         </div>
+
+        {/* Project: Stock Forecaster */}
         <div className="project-card">
-          <h3>Youtube Clone</h3>
+          <h3>Stock Forecaster</h3>
+          <p>
+            This project is a stock price forecasting tool using a traditional Machine Learning model,
+            specifically a <code>RandomForestRegressor</code>, to predict future stock prices.
+            The project fetches historical stock price data from Yahoo Finance and uses features like
+            moving averages to make short-term price predictions.
+          </p>
+        </div>
+
+        {/* Project: YouTube Clone */}
+        <div className="project-card">
+          <h3>YouTube Clone</h3>
           <p>
             This YouTube Clone project features a React frontend and a
             Node.js/Express backend. It displays a list of predefined videos
@@ -26,16 +41,18 @@ const Projects = () => {
             requests and communicates with the YouTube API to fetch dynamic
             results. While the predefined videos are fully functional, the
             search feature is still being improved to ensure seamless
-            communication between the frontend and backend.Link to Repo:
-            https://github.com/satvikgarimella/YouTube_Clone
+            communication between the frontend and backend.
           </p>
-          {/* Add the image for the YouTube Clone project here */}
+          <p>
+            Link to Repo: <a href="https://github.com/satvikgarimella/YouTube_Clone" target="_blank" rel="noopener noreferrer">YouTube Clone Repository</a>
+          </p>
           <img
             src={youtubeImage}
             alt="YouTube Clone"
             style={{ width: "auto", height: "auto" }}
           />
         </div>
+        
       </div>
     </section>
   );
