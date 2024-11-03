@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";  // Import CSS for styling
+import "./App.css"; // Import CSS for styling
 
 import Header from "./Header";
 import Hero from "./Hero";
-import WorkExperiences from "./WorkExperiences";
+import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
 import Certificates from "./Certificates";
 import Contact from "./Contact";
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <WorkExperiences />
+      <WorkExperience />
       <Projects />
       <Certificates />
       <Contact />
