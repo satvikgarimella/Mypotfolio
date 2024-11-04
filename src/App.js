@@ -1,22 +1,23 @@
+// src/App.js
+
 import React from 'react';
 import Header from './Header';
 import Hero from './Hero';
-import WorkExperience from './WorkExperience'; // Corrected spelling in import
+import WorkExperience from './WorkExperience'; // Import WorkExperience correctly
 import Projects from './Projects';
 import Certificates from './Certificates';
-import Contact from './Contact'; // Ensure Contact is imported
+import Contact from './Contact';
 import Footer from './Footer';
-
 
 function App() {
   return (
     <div>
       <Header />
       <Hero />
-      <WorkExperience /> {/* WorkExperience is now properly spelled */}
+      <WorkExperience /> {/* WorkExperience component */}
       <Projects />
       <Certificates />
-      <Contact /> {/* Added Contact component to the JSX */}
+      <Contact />
       <Footer />
     </div>
   );
