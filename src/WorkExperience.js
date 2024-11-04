@@ -1,3 +1,5 @@
+// src/WorkExperience.js
+
 import React from 'react';
 
 const WorkExperience = () => {
@@ -5,7 +7,7 @@ const WorkExperience = () => {
     <section id="work-experience" className="WorkExperience">
       <h2>Work Experience</h2>
       <div className="WorkExperience-list">
-        {/* Work Experience Card 1 */}
+        
         <div className="WorkExperience-card">
           <h3>Full Stack Developer @ SaiDham Food Bank</h3>
           <p>
@@ -15,7 +17,6 @@ const WorkExperience = () => {
           </p>
         </div>
 
-        {/* Work Experience Card 2 */}
         <div className="WorkExperience-card">
           <h3>Co-Lead @ Fx Hackathons</h3>
           <p>
