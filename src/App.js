@@ -1,26 +1,26 @@
-import React from "react";
-import azureImage from "./Azure.png"; // Adjust path relative to where this component is located
+import React from 'react';
+import './styles.css';
 
-const App = () => {
+import Header from './Header';
+import Hero from './Hero';
+import WorkExperience from './WorkExperience'; // Corrected spelling in import
+import Projects from './Projects';
+import Certificates from './Certificates';
+import Contact from './Contact'; // Ensure Contact is imported
+import Footer from './Footer';
+
+function App() {
   return (
     <div>
-      <h1>Welcome to My Portfolio</h1>
-      <section id="certificates" className="certificates">
-        <h2>Certificates</h2>
-        <div className="cert-list">
-          <div className="cert-card">
-            <h3>Azure</h3>
-            {/* Display the imported image here */}
-            <img
-              src={azureImage}
-              alt="Azure"
-              style={{ width: "auto", height: "auto" }}
-            />
-          </div>
-        </div>
-      </section>
+      <Header />
+      <Hero />
+      <WorkExperience /> {/* WorkExperience is now properly spelled */}
+      <Projects />
+      <Certificates />
+      <Contact /> {/* Added Contact component to the JSX */}
+      <Footer />
     </div>
   );
-};
+}
 
 export default App;
