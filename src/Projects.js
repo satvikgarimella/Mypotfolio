@@ -41,7 +41,6 @@ const Projects = () => {
             predict future stock prices. The project fetches historical stock price data from Yahoo Finance and uses features like moving averages
             to make short-term price predictions.
           </p>
-          <img src={stockImage} alt="Stock Forecaster" style={{ width: 'auto', height: 'auto' }} />
         </div>
         
       </div>
