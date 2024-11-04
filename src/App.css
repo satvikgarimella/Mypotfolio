@@ -95,7 +95,7 @@ body {
   transform: translateY(-5px);
 }
 
-/* WorkExperience Section */
+/* WorkExperience, Projects, and Certificates sections */
 .WorkExperience, .projects, .certificates {
   padding: 60px 20px;
   background-color: var(--main-bg-color);
@@ -116,8 +116,9 @@ body {
 
 .WorkExperience-card, .project-card, .cert-card {
   background-color: var(--card-bg-color);
-  padding: 40px;
-  width: 400px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -136,9 +137,18 @@ body {
   margin-bottom: 10px;
 }
 
+/* Project image styling */
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 /* Contact Section Styling */
 .contact-section {
-  padding: 80px 20px; /* Increased padding for better spacing */
+  padding: 80px 20px;
   background-color: var(--main-bg-color);
   color: var(--text-color);
   text-align: center;
@@ -163,10 +173,10 @@ body {
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  background-color: var(--card-bg-color); /* Add card background */
+  background-color: var(--card-bg-color);
   padding: 40px;
-  border-radius: 12px; /* Smooth corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form div {
@@ -253,18 +263,8 @@ body {
 .footer p {
   margin: 0;
 }
-/* Footer styling */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--header-bg-color);
-  color: var(--subtext-color);
-}
 
-.footer p {
-  margin: 0;
-}
-
+/* Animation Keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
