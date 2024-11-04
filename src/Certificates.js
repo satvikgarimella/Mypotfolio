@@ -1,5 +1,5 @@
-import React from "react";
-import azureImage from "./Azure.png"; // Adjust path relative to where this component is located
+import React from 'react';
+import azureImage from './Azure.png'; // Adjust path relative to where this component is located
 
 const App = () => {
   return (
@@ -11,10 +11,10 @@ const App = () => {
           <div className="cert-card">
             <h3>Azure</h3>
             {/* Display the imported image here */}
-            <img
-              src={azureImage}
-              alt="Azure"
-              style={{ width: "auto", height: "auto" }}
+            <img 
+              src={azureImage} 
+              alt="Azure" 
+              style={{ width: 'auto', height: 'auto' }} 
             />
           </div>
         </div>
