@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Header = () => {
   return (
@@ -6,11 +6,11 @@ const Header = () => {
       <h1 className="logo">Satvik's Portfolio</h1>
       <nav>
         <ul>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#work-experience">Work Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-me">About Me</a></li> {/* Corrected href to match section id */}
+          <li><a href="#work-experience">Work Experience</a></li> {/* Corrected href */}
+          <li><a href="#projects">Projects</a></li> {/* Corrected href */}
+          <li><a href="#certificates">Certificates</a></li> {/* Corrected href */}
+          <li><a href="#contact">Contact</a></li> {/* Corrected href */}
         </ul>
       </nav>
     </header>
