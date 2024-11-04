@@ -16,17 +16,12 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--main-bg-color);
   color: var(--text-color);
   line-height: 1.6;
   transition: all 0.3s ease;
   text-align: center;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* Header styling */
@@ -69,11 +64,7 @@ img {
   position: relative;
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(
-    135deg,
-    var(--accent-color),
-    var(--subtext-color)
-  );
+  background: linear-gradient(135deg, var(--accent-color), var(--subtext-color));
   overflow: hidden;
 }
 
@@ -105,37 +96,28 @@ img {
 }
 
 /* WorkExperience Section */
-.WorkExperience,
-.projects,
-.certificates {
+.WorkExperience, .projects, .certificates {
   padding: 60px 20px;
   background-color: var(--main-bg-color);
 }
 
-.WorkExperience h2,
-.projects h2,
-.certificates h2 {
+.WorkExperience h2, .projects h2, .certificates h2 {
   font-size: 36px;
   margin-bottom: 30px;
   color: var(--accent-color);
 }
 
-.WorkExperience-list,
-.project-list,
-.cert-list {
+.WorkExperience-list, .project-list, .cert-list {
   display: flex;
   justify-content: space-around;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.WorkExperience-card,
-.project-card,
-.cert-card {
+.WorkExperience-card, .project-card, .cert-card {
   background-color: var(--card-bg-color);
   padding: 40px;
-  width: 100%; /* Set to 100% width on mobile */
-  max-width: 400px; /* Max width for larger screens */
+  width: 400px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -144,16 +126,12 @@ img {
   align-items: center;
 }
 
-.WorkExperience-card:hover,
-.project-card:hover,
-.cert-card:hover {
+.WorkExperience-card:hover, .project-card:hover, .cert-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.WorkExperience-card h3,
-.project-card h3,
-.cert-card h3 {
+.WorkExperience-card h3, .project-card h3, .cert-card h3 {
   color: var(--accent-color);
   margin-bottom: 10px;
 }
@@ -238,8 +216,7 @@ img {
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -276,6 +253,17 @@ img {
 .footer p {
   margin: 0;
 }
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg-color);
+  color: var(--subtext-color);
+}
+
+.footer p {
+  margin: 0;
+}
 
 @keyframes fadeIn {
   0% {
@@ -289,7 +277,7 @@ img {
 }
 
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 200px;
   height: 200px;
@@ -301,7 +289,7 @@ img {
 }
 
 .hero::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 300px;
   height: 300px;
@@ -321,57 +309,5 @@ img {
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-/* Responsive Design - Media Queries for Mobile */
-@media (max-width: 768px) {
-  .WorkExperience-list,
-  .project-list,
-  .cert-list {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    gap: 20px;
-  }
-
-  .WorkExperience-card,
-  .project-card,
-  .cert-card {
-    width: 100%; /* Set full width for mobile */
-    max-width: none; /* Remove max-width restriction */
-    padding: 20px; /* Reduce padding for mobile */
-  }
-
-  .hero h2 {
-    font-size: 28px; /* Adjust font size for mobile */
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .cta {
-    font-size: 14px;
-    padding: 12px 24px;
-  }
-
-  .contact-section h2 {
-    font-size: 28px; /* Adjust heading size for mobile */
-  }
-
-  .contact-section p {
-    font-size: 16px; /* Adjust paragraph size for mobile */
-  }
-
-  .contact-form {
-    padding: 20px; /* Reduce padding for mobile */
-  }
-
-  .contact-form button {
-    font-size: 16px; /* Adjust button text size for mobile */
-    padding: 12px 24px;
-  }
-
-  .footer p {
-    font-size: 14px; /* Adjust footer text size for mobile */
   }
 }
