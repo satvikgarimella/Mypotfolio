@@ -119,14 +119,12 @@ body {
   padding: 20px;
   width: 100%;
   max-width: 400px;
-  height: 300px; /* Fixed height for the container */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 .WorkExperience-card:hover, .project-card:hover, .cert-card:hover {
@@ -137,17 +135,25 @@ body {
 .WorkExperience-card h3, .project-card h3, .cert-card h3 {
   color: var(--accent-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Project image styling */
 .project-card img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  max-width: 300px; /* Set a fixed maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
   object-fit: contain; /* Ensures the entire image fits within the container */
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Space between the image and the content */
+}
+
+/* Text styling for the project card */
+.project-card p {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* Contact Section Styling */
