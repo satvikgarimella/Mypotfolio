@@ -1,67 +1,61 @@
-// src/ContactForm.js
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 
-const ContactForm = () => {
+const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-      e.target, 
-      'YOUR_USER_ID'     // Replace with your EmailJS user ID
-    )
-    .then((result) => {
-      alert('Message sent successfully!');
-    }, (error) => {
-      alert('Failed to send message, please try again later.');
-    });
-
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setMessage('');
+    // Using mailto to send email
+    window.location.href = `mailto:satvikgarimella2@gmail.com?subject=Message from ${name}&body=${message}`;
   };
 
   return (
-    <form onSubmit={sendEmail} className="contact-form">
-      <div>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+    <section id="contact" className="contact-section">
+      <h2>Contact Me</h2>
+      <p>You can reach me via email or phone.</p>
+      
+      {/* Contact Form */}
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          ></textarea>
+        </div>
+        <button type="submit" className="cta">Send Message</button>
+      </form>
+
+      {/* Call Link */}
+      <div className="contact-options">
+        <p>Or, you can call me directly at: <a href="tel:+16478044968">647-804-4968</a></p>
       </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message</label>
-        <textarea
-          name="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        ></textarea>
-      </div>
-      <button type="submit" className="cta">Send Message</button>
-    </form>
+    </section>
   );
 };
 
-export default ContactForm;
+export default Contact;
