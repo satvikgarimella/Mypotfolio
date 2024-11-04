@@ -1,6 +1,8 @@
 // src/App.js
 
 import React from 'react';
+import './App.css'; // Importing App.css for component-specific styling
+
 import Header from './Header';
 import Hero from './Hero';
 import WorkExperience from './WorkExperience';
