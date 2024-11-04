@@ -3,8 +3,8 @@
 import React from 'react';
 import Header from './Header';
 import Hero from './Hero';
-import WorkExperience from './WorkExperience'; // Import WorkExperience correctly
-import Project from './Project';
+import WorkExperience from './WorkExperience';
+import Projects from './Projects';
 import Certificates from './Certificates';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -14,7 +14,7 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <WorkExperience /> {/* WorkExperience component */}
+      <WorkExperience />
       <Projects />
       <Certificates />
       <Contact />
