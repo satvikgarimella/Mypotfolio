@@ -2,7 +2,6 @@
 
 import React from 'react';
 import youtubeImage from './Youtube.png'; // Adjust path if necessary
-import stockImage from './Stock.png'; // Placeholder for stock forecaster image
 
 const Projects = () => {
   return (
@@ -33,7 +32,7 @@ const Projects = () => {
           <img src={youtubeImage} alt="YouTube Clone" style={{ width: 'auto', height: 'auto' }} />
         </div>
         
-        {/* Project Card: Stock Forecaster */}
+        {/* Project Card: Stock Forecaster (No Image) */}
         <div className="project-card">
           <h3>Stock Forecaster</h3>
           <p>
