@@ -7,7 +7,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Using mailto to send email
     window.location.href = `mailto:satvikgarimella2@gmail.com?subject=Message from ${name}&body=${message}`;
   };
 
@@ -15,8 +14,6 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
       <p>You can reach me via email or phone.</p>
-      
-      {/* Contact Form */}
       <form onSubmit={handleSubmit} className="contact-form">
         <div>
           <label htmlFor="name">Name</label>
@@ -49,8 +46,6 @@ const Contact = () => {
         </div>
         <button type="submit" className="cta">Send Message</button>
       </form>
-
-      {/* Call Link */}
       <div className="contact-options">
         <p>Or, you can call me directly at: <a href="tel:+16478044968">647-804-4968</a></p>
       </div>
