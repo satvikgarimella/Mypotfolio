@@ -2,13 +2,13 @@
   "name": "satvik-portfolio",
   "version": "1.0.0",
   "description": "Satvik's personal portfolio built with React",
-  
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "react-icons": "^4.10.1" 
   },
   "devDependencies": {
     "@types/react": "18.2.38",
