@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa'; // Import LinkedIn and GitHub icons
 
 const Header = () => {
   return (
@@ -6,11 +7,11 @@ const Header = () => {
       <div className="header-top">
         <h1 className="logo">Satvik's Portfolio</h1>
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
-            LinkedIn
+          <a href="https://www.linkedin.com/in/satvik-garimella-100049201/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin />
           </a>
-          <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
-            GitHub
+          <a href="https://github.com/satvikgarimella" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub />
           </a>
         </div>
       </div>
