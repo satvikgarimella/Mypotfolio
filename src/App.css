@@ -7,7 +7,7 @@
   --card-bg-color: #23272a;
 }
 
-/* Universal styles */
+/* Universal Styles */
 * {
   margin: 0;
   padding: 0;
@@ -24,13 +24,12 @@ body {
   text-align: center;
 }
 
-/* Header styling */
+/* Header Section */
 .header {
   background-color: var(--header-bg-color);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -70,7 +69,6 @@ body {
   color: var(--accent-color);
 }
 
-/* Social links styling */
 .social-links {
   display: flex;
   gap: 15px;
@@ -78,121 +76,92 @@ body {
 
 .social-links a {
   color: var(--text-color);
-  font-size: 20px;
-  transition: color 0.3s ease;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
   color: var(--accent-color);
+  transform: scale(1.1);
 }
 
-.social-link a {
-  font-size: 24px;
+/* Projects Section */
+.projects {
+  padding: 60px 20px;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.project-list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--subtext-color);
+  margin-bottom: 15px;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Smaller image size for the Weather App Clone */
+.project-card img.small-image {
+  max-width: 300px;
+  margin: 15px auto;
+  display: block;
+}
+
+.project-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.social-link a:hover {
-  color: var(--accent-color);
-}
-
-/* Hero section styling */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, var(--accent-color), var(--subtext-color));
-  overflow: hidden;
-}
-
-.hero h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  animation: fadeIn 2.5s ease-in-out;
-}
-
-.cta {
-  background-color: var(--accent-color);
+.project-card a:hover {
   color: var(--text-color);
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta:hover {
-  background-color: var(--subtext-color);
-  transform: translateY(-5px);
-}
-
-/* WorkExperience, Projects, and Certificates sections */
-.WorkExperience, .projects, .certificates {
-  padding: 60px 20px;
-  background-color: var(--main-bg-color);
-}
-
-.WorkExperience h2, .projects h2, .certificates h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: var(--accent-color);
-}
-
-.WorkExperience-list, .project-list, .cert-list {
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.WorkExperience-card, .project-card, .cert-card {
-  background-color: var(--card-bg-color);
-  padding: 20px;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.WorkExperience-card:hover, .project-card:hover, .cert-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.WorkExperience-card h3, .project-card h3, .cert-card h3 {
-  color: var(--accent-color);
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.project-card img, .cert-card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.project-card p, .cert-card p {
-  color: var(--text-color);
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Footer Styling */
+/* Footer Section */
 .footer {
   text-align: center;
   padding: 20px;
@@ -217,28 +186,30 @@ body {
   }
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  top: -50px;
-  left: -50px;
-  animation: float 6s ease-in-out infinite;
-}
-
+.hero::before,
 .hero::after {
   content: '';
   position: absolute;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero::before {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -50px;
+  left: -50px;
+  animation-duration: 6s;
+}
+
+.hero::after {
   width: 300px;
   height: 300px;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
   bottom: -100px;
   right: -100px;
-  animation: float 8s ease-in-out infinite;
+  animation-duration: 8s;
 }
 
 @keyframes float {
