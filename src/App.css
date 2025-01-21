@@ -20,6 +20,7 @@ body {
   background-color: var(--main-bg-color);
   color: var(--text-color);
   line-height: 1.6;
+  transition: all 0.3s ease;
   text-align: center;
 }
 
@@ -29,6 +30,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -83,19 +85,21 @@ body {
 }
 
 .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid layout for responsive cards */
+  display: flex;
+  justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .project-card {
   background-color: var(--card-bg-color);
   padding: 20px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space out content evenly */
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -142,7 +146,8 @@ body {
 
 /* Weather App Clone Specific Styling */
 .project-card img.weather-app-image {
-  max-width: 250px;
+  max-width: 200px; /* Smaller width for the weather app image */
+  height: auto;
   margin: 15px auto;
   display: block;
   border-radius: 8px;
