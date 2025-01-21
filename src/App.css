@@ -20,7 +20,6 @@ body {
   background-color: var(--main-bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  transition: all 0.3s ease;
   text-align: center;
 }
 
@@ -30,7 +29,6 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -70,22 +68,6 @@ body {
   color: var(--accent-color);
 }
 
-/* Social links styling */
-.social-links {
-  display: flex;
-  gap: 15px;
-}
-
-.social-links a {
-  color: var(--text-color);
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--accent-color);
-}
-
 /* Projects Section */
 .projects {
   padding: 60px 20px;
@@ -101,23 +83,20 @@ body {
 }
 
 .project-list {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid layout for responsive cards */
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .project-card {
   background-color: var(--card-bg-color);
   padding: 20px;
-  flex: 1 1 300px; /* Allow cards to grow and shrink while maintaining minimum width */
-  max-width: 400px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Space out content evenly */
   align-items: center;
-  justify-content: space-between; /* Distribute content evenly */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
