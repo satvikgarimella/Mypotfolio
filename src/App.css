@@ -152,6 +152,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto; /* Allow dynamic height based on content */
 }
 
 .WorkExperience-card:hover, .project-card:hover, .cert-card:hover {
@@ -176,10 +177,10 @@ body {
 
 /* Weather App Clone Specific Styling */
 .project-card img.weather-app-image {
-  max-width: 250px; /* Set a smaller maximum width */
-  margin: 15px auto; /* Center the image */
-  display: block; /* Ensure it aligns properly */
-  border-radius: 8px; /* Maintain consistent rounded corners */
+  max-width: 250px; /* Smaller width for the weather app */
+  margin: 15px auto;
+  display: block;
+  border-radius: 8px;
 }
 
 /* Contact Section Styling */
