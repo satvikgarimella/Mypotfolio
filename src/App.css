@@ -86,98 +86,84 @@ body {
   color: var(--accent-color);
 }
 
-/* Hero section styling */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, var(--accent-color), var(--subtext-color));
-  overflow: hidden;
-}
-
-.hero h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  animation: fadeIn 2.5s ease-in-out;
-}
-
-.cta {
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta:hover {
-  background-color: var(--subtext-color);
-  transform: translateY(-5px);
-}
-
-/* WorkExperience, Projects, and Certificates sections */
-.WorkExperience, .projects, .certificates {
+/* Projects Section */
+.projects {
   padding: 60px 20px;
   background-color: var(--main-bg-color);
+  color: var(--text-color);
 }
 
-.WorkExperience h2, .projects h2, .certificates h2 {
+.projects h2 {
   font-size: 36px;
-  margin-bottom: 30px;
+  font-weight: bold;
   color: var(--accent-color);
+  margin-bottom: 30px;
 }
 
-.WorkExperience-list, .project-list, .cert-list {
+.project-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.WorkExperience-card, .project-card, .cert-card {
+.project-card {
   background-color: var(--card-bg-color);
   padding: 20px;
-  width: 100%;
+  flex: 1 1 300px; /* Allow cards to grow and shrink while maintaining minimum width */
   max-width: 400px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto; /* Allow dynamic height based on content */
+  justify-content: space-between; /* Distribute content evenly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.WorkExperience-card:hover, .project-card:hover, .cert-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.WorkExperience-card h3, .project-card h3, .cert-card h3 {
+.project-card h3 {
+  font-size: 24px;
+  font-weight: bold;
   color: var(--accent-color);
   margin-bottom: 10px;
   text-align: center;
 }
 
-/* Project and certificate image styling */
-.project-card img, .cert-card img {
+.project-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--subtext-color);
+  margin: 15px 0;
+  text-align: center;
+}
+
+.project-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: var(--text-color);
+}
+
+.project-card img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 /* Weather App Clone Specific Styling */
 .project-card img.weather-app-image {
-  max-width: 250px; /* Smaller width for the weather app */
+  max-width: 250px;
   margin: 15px auto;
   display: block;
   border-radius: 8px;
@@ -299,52 +285,4 @@ body {
 
 .footer p {
   margin: 0;
-}
-
-/* Animation Keyframes */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  top: -50px;
-  left: -50px;
-  animation: float 6s ease-in-out infinite;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  bottom: -100px;
-  right: -100px;
-  animation: float 8s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
