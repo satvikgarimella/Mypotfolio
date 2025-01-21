@@ -188,11 +188,11 @@ body {
 
 /* Weather App Clone Specific Styling */
 .project-card img.weather-app-image {
-  max-width: 300px; /* Match the YouTube Clone image size */
+  max-width: 200px; /* Reduce the maximum width */
   height: auto; /* Maintain aspect ratio */
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  object-fit: contain; /* Ensure it scales properly */
+  border-radius: 8px; /* Consistent rounded corners */
+  margin-bottom: 20px; /* Space below the image */
 }
 
 /* Text styling for the project and certificate cards */
