@@ -1,74 +1,35 @@
-:root {
-  --main-bg-color: #2c2f33;
-  --header-bg-color: #23272a;
-  --accent-color: #7289da;
-  --text-color: #fff;
-  --subtext-color: #99aab5;
-  --card-bg-color: #23272a;
-}
-
-/* Universal Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--main-bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-/* Header Section */
 .header {
-  background-color: var(--header-bg-color);
-  padding: 20px;
+background-color: var(--header-bg-color);
+padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
   width: 100%;
   padding: 0 20px;
 }
 
 .logo {
-  font-size: 24px;
-  color: var(--accent-color);
-  transition: color 0.3s ease;
-}
-
+@@ -42,6 +51,8 @@ body {
 .header ul {
-  display: flex;
-  list-style: none;
+display: flex;
+list-style: none;
   padding: 0;
   margin: 10px 0 0;
 }
 
 .header li {
-  margin-left: 20px;
+@@ -59,6 +70,33 @@ body {
+color: var(--accent-color);
 }
 
-.header a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.header a:hover {
-  color: var(--accent-color);
-}
-
+/* Social links styling */
 .social-links {
   display: flex;
   gap: 15px;
@@ -76,19 +37,59 @@ body {
 
 .social-links a {
   color: var(--text-color);
-  font-size: 24px; /* Icon size */
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
 
 .social-links a:hover {
   color: var(--accent-color);
-  transform: scale(1.1);
 }
 
-/* Contact Section */
+.social-link a {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-link a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero section styling */
+.hero {
+position: relative;
+@@ -138,129 +176,22 @@ body {
+text-align: center;
+}
+
+/* Project and certificate image styling */
+.project-card img, .cert-card img {
+width: 100%;
+  max-width: 300px; /* Set a fixed maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the entire image fits within the container */
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+border-radius: 8px;
+  margin-bottom: 20px; /* Space between the image and the content */
+  margin-bottom: 20px;
+}
+
+/* Text styling for the project and certificate cards */
+.project-card p, .cert-card p {
+color: var(--text-color);
+text-align: center;
+font-size: 16px;
+line-height: 1.5;
+}
+
+/* Contact Section Styling */
 .contact-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: var(--main-bg-color);
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -106,34 +107,40 @@ body {
 }
 
 .contact-form {
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
   margin: 0 auto;
   background-color: var(--card-bg-color);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+}
+
+.contact-form div {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .contact-form label {
-  font-size: 14px;
-  font-weight: 600;
-  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--text-color);
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px;
-  border: 2px solid var(--subtext-color);
+  padding: 15px;
   border-radius: 8px;
+  border: 2px solid var(--subtext-color);
   background-color: var(--header-bg-color);
   color: var(--text-color);
-  font-size: 14px;
-  outline: none;
+  font-size: 16px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -141,28 +148,30 @@ body {
 .contact-form textarea:focus {
   border-color: var(--accent-color);
   box-shadow: 0 0 8px rgba(114, 137, 218, 0.5);
+  outline: none;
 }
 
 .contact-form textarea {
-  height: 120px;
+  height: 150px;
   resize: vertical;
 }
 
 .contact-form button {
   background-color: var(--accent-color);
   color: var(--text-color);
-  font-size: 16px;
-  font-weight: bold;
   border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
   border-radius: 8px;
-  padding: 12px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form button:hover {
   background-color: var(--subtext-color);
   transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-options {
@@ -172,7 +181,7 @@ body {
 .contact-options a {
   color: var(--accent-color);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -181,65 +190,6 @@ body {
   color: var(--text-color);
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--header-bg-color);
-  color: var(--subtext-color);
-  margin-top: 40px;
-}
-
-.footer p {
-  margin: 0;
-}
-
-/* Utility Styles */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero::before,
-.hero::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
-}
-
-.hero::before {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.1);
-  top: -50px;
-  left: -50px;
-  animation-duration: 6s;
-}
-
-.hero::after {
-  width: 300px;
-  height: 300px;
-  background-color: rgba(255, 255, 255, 0.05);
-  bottom: -100px;
-  right: -100px;
-  animation-duration: 8s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+text-align: center;
