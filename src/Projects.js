@@ -1,13 +1,13 @@
 import React from 'react';
-import youtubeImage from './Youtube.png'; // Adjust path if necessary
-import weatherAppImage from './assets/IMG_371FE8A05620-1.jpeg'; // Corrected path
+import youtubeImage from './Youtube.png'; // Update this path if Youtube.png is elsewhere
+import weatherAppImage from './IMG_371FE8A05620-1.jpeg'; // Adjusted path based on your file's location
 
 const Projects = () => {
   return (
     <section id="projects" className="projects">
       <h2>Projects</h2>
       <div className="project-list">
-        
+
         {/* Project Card: This Website */}
         <div className="project-card">
           <h3>This Website</h3>
@@ -17,7 +17,7 @@ const Projects = () => {
             to detail, and modern web development technologies.
           </p>
         </div>
-        
+
         {/* Project Card: YouTube Clone */}
         <div className="project-card">
           <h3>YouTube Clone</h3>
@@ -30,8 +30,8 @@ const Projects = () => {
           </p>
           <img src={youtubeImage} alt="YouTube Clone" style={{ width: 'auto', height: 'auto' }} />
         </div>
-        
-        {/* Project Card: Stock Forecaster (No Image) */}
+
+        {/* Project Card: Stock Forecaster */}
         <div className="project-card">
           <h3>Stock Forecaster</h3>
           <p>
@@ -52,7 +52,7 @@ const Projects = () => {
           </p>
           <img src={weatherAppImage} alt="Weather App Clone" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
         </div>
-        
+
       </div>
     </section>
   );
