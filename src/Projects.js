@@ -1,5 +1,5 @@
 import React from 'react';
-import youtubeImage from './Youtube.png'; // Update this path if Youtube.png is elsewhere
+import youtubeImage from './Youtube.png'; // Adjust path if necessary
 import weatherAppImage from './IMG_371FE8A05620-1.jpeg'; // Adjusted path based on your file's location
 
 const Projects = () => {
@@ -28,7 +28,7 @@ const Projects = () => {
             still being improved to ensure seamless communication between the frontend and backend. 
             <a href="https://github.com/satvikgarimella/YouTube_Clone">Link to Repo</a>
           </p>
-          <img src={youtubeImage} alt="YouTube Clone" style={{ width: 'auto', height: 'auto' }} />
+          <img src={youtubeImage} alt="YouTube Clone" className="project-image" />
         </div>
 
         {/* Project Card: Stock Forecaster */}
@@ -50,7 +50,7 @@ const Projects = () => {
             manually searched cities. It features a clean and responsive UI, leveraging native components for a seamless user experience.
             <a href="https://github.com/satvikgarimella/weather-app">Link to Repo</a>
           </p>
-          <img src={weatherAppImage} alt="Weather App Clone" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+          <img src={weatherAppImage} alt="Weather App Clone" className="project-image small-image" />
         </div>
 
       </div>
