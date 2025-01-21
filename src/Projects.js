@@ -1,5 +1,3 @@
-// src/Projects.js
-
 import React from 'react';
 import youtubeImage from './Youtube.png'; // Adjust path if necessary
 
@@ -36,9 +34,20 @@ const Projects = () => {
         <div className="project-card">
           <h3>Stock Forecaster</h3>
           <p>
-            This project is a stock price forecasting tool using a traditional Machine Learning model, specifically a `RandomForestRegressor`, to
+            This project is a stock price forecasting tool using a traditional Machine Learning model, specifically a RandomForestRegressor, to
             predict future stock prices. The project fetches historical stock price data from Yahoo Finance and uses features like moving averages
             to make short-term price predictions.
+          </p>
+        </div>
+
+        {/* Project Card: Weather App Clone */}
+        <div className="project-card">
+          <h3>Weather App Clone</h3>
+          <p>
+            The Weather App Clone is a mobile application built using React Native, designed to provide users with real-time weather updates. 
+            By integrating the OpenWeatherMap API, the app fetches current weather conditions and forecasts based on the user's location or 
+            manually searched cities. It features a clean and responsive UI, leveraging native components for a seamless user experience.
+            <a href="https://github.com/satvikgarimella/weather-app">Link to Repo</a>
           </p>
         </div>
         
