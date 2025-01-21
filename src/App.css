@@ -76,7 +76,7 @@ body {
 
 .social-links a {
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 24px; /* Icon size */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -85,83 +85,103 @@ body {
   transform: scale(1.1);
 }
 
-/* Projects Section */
-.projects {
+/* Contact Section */
+.contact-section {
   padding: 60px 20px;
   background-color: var(--main-bg-color);
-  color: var(--text-color);
   text-align: center;
 }
 
-.projects h2 {
+.contact-section h2 {
   font-size: 36px;
   font-weight: bold;
   color: var(--accent-color);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.project-list {
+.contact-section p {
+  font-size: 18px;
+  color: var(--subtext-color);
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--card-bg-color);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
+  gap: 20px;
 }
 
-.project-card {
-  background-color: var(--card-bg-color);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.contact-form label {
+  font-size: 14px;
+  font-weight: 600;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.project-card h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--accent-color);
-  margin-bottom: 15px;
-}
-
-.project-card p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--subtext-color);
-  margin-bottom: 15px;
-}
-
-.project-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-
-/* Smaller image size for the Weather App Clone */
-.project-card img.small-image {
-  max-width: 300px;
-  margin: 15px auto;
-  display: block;
-}
-
-.project-card a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.project-card a:hover {
   color: var(--text-color);
 }
 
-/* Footer Section */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--subtext-color);
+  border-radius: 8px;
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(114, 137, 218, 0.5);
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--subtext-color);
+  transform: translateY(-3px);
+}
+
+.contact-options {
+  margin-top: 30px;
+}
+
+.contact-options a {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-options a:hover {
+  color: var(--text-color);
+}
+
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
@@ -174,7 +194,7 @@ body {
   margin: 0;
 }
 
-/* Animation Keyframes */
+/* Utility Styles */
 @keyframes fadeIn {
   0% {
     opacity: 0;
