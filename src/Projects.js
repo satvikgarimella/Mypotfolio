@@ -1,5 +1,6 @@
 import React from 'react';
 import youtubeImage from './Youtube.png'; // Adjust path if necessary
+import weatherAppImage from './assets/IMG_371FE8A05620-1.jpeg'; // Corrected path
 
 const Projects = () => {
   return (
@@ -49,6 +50,7 @@ const Projects = () => {
             manually searched cities. It features a clean and responsive UI, leveraging native components for a seamless user experience.
             <a href="https://github.com/satvikgarimella/weather-app">Link to Repo</a>
           </p>
+          <img src={weatherAppImage} alt="Weather App Clone" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
         </div>
         
       </div>
